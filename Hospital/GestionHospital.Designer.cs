@@ -66,6 +66,7 @@
             this.btnMedico.TabIndex = 6;
             this.btnMedico.Text = "Area Medico";
             this.btnMedico.UseVisualStyleBackColor = false;
+            this.btnMedico.Click += new System.EventHandler(this.btnMedico_Click);
             // 
             // btnPersAdm
             // 

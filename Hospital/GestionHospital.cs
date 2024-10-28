@@ -24,5 +24,12 @@ namespace Hospital
             areaPaciente.Show();
             this.Hide();
         }
+
+        private void btnMedico_Click(object sender, EventArgs e)
+        {
+            AreaMedico areaMedico = new AreaMedico();
+            areaMedico.Show();
+            this.Hide();
+        }
     }
 }

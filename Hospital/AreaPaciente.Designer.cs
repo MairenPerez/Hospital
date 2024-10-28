@@ -234,9 +234,10 @@
             // rdButonHombre
             // 
             this.rdButonHombre.AutoSize = true;
+            this.rdButonHombre.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdButonHombre.Location = new System.Drawing.Point(385, 135);
             this.rdButonHombre.Name = "rdButonHombre";
-            this.rdButonHombre.Size = new System.Drawing.Size(77, 20);
+            this.rdButonHombre.Size = new System.Drawing.Size(86, 24);
             this.rdButonHombre.TabIndex = 22;
             this.rdButonHombre.TabStop = true;
             this.rdButonHombre.Text = "Hombre";
@@ -245,9 +246,10 @@
             // rdButtonMujer
             // 
             this.rdButtonMujer.AutoSize = true;
+            this.rdButtonMujer.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdButtonMujer.Location = new System.Drawing.Point(468, 136);
             this.rdButtonMujer.Name = "rdButtonMujer";
-            this.rdButtonMujer.Size = new System.Drawing.Size(61, 20);
+            this.rdButtonMujer.Size = new System.Drawing.Size(71, 24);
             this.rdButtonMujer.TabIndex = 23;
             this.rdButtonMujer.TabStop = true;
             this.rdButtonMujer.Text = "Mujer";
@@ -283,7 +285,7 @@
             this.btGuardar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btGuardar.Size = new System.Drawing.Size(150, 54);
             this.btGuardar.TabIndex = 25;
-            this.btGuardar.Text = "Guardar";
+            this.btGuardar.Text = "Agregar Paciente";
             this.btGuardar.UseVisualStyleBackColor = false;
             // 
             // btBorrar

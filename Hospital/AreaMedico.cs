@@ -10,24 +10,22 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class AreaPaciente : Form
+    public partial class AreaMedico : Form
     {
-        public AreaPaciente()
+        public AreaMedico()
         {
             InitializeComponent();
         }
 
         private void btBorrar_Click(object sender, EventArgs e)
         {
-            // Limpiamos los campos
-            txtHistoriaCli.Text = "";
-            txtNomPaciente.Text = "";
-            txtApellidosPaciente.Text = "";
-            txtTelefono.Text = "";
-            rdButonHombre.Checked = false;
-            rdButtonMujer.Checked = false;
-            txtDiagnostico.Text = "";
-            txtTratamiento.Text = "";
+            txtNombreMedico.Text = "";
+            txtApellidosMedico.Text = "";
+            txtTelefonoMedico.Text = "";
+            rdButonHombreMed.Checked = false;
+            rdButtonMujerMed.Checked = false;
+            txtSalarioMedico.Text = "";
+            listBoxEspecialidadMed.ClearSelected();
         }
 
         private void btnVolverAreas_Click(object sender, EventArgs e)
