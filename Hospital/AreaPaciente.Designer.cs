@@ -95,7 +95,7 @@
             // 
             this.lblHistoriaCli.AutoSize = true;
             this.lblHistoriaCli.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistoriaCli.Location = new System.Drawing.Point(637, 68);
+            this.lblHistoriaCli.Location = new System.Drawing.Point(622, 68);
             this.lblHistoriaCli.Name = "lblHistoriaCli";
             this.lblHistoriaCli.Size = new System.Drawing.Size(172, 22);
             this.lblHistoriaCli.TabIndex = 4;
@@ -319,6 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1048, 699);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btBorrar);

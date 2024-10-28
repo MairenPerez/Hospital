@@ -31,5 +31,12 @@ namespace Hospital
             areaMedico.Show();
             this.Hide();
         }
+
+        private void btnPersAdm_Click(object sender, EventArgs e)
+        {
+            AreaPersonalAdm areaPersonalAdm = new AreaPersonalAdm();
+            areaPersonalAdm.Show();
+            this.Hide();
+        }
     }
 }

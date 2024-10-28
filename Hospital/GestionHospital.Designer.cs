@@ -83,6 +83,7 @@
             this.btnPersAdm.TabIndex = 7;
             this.btnPersAdm.Text = "Area Personal Adm";
             this.btnPersAdm.UseVisualStyleBackColor = false;
+            this.btnPersAdm.Click += new System.EventHandler(this.btnPersAdm_Click);
             // 
             // label1
             // 
