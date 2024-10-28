@@ -17,5 +17,25 @@ namespace Hospital
             InitializeComponent();
         }
 
+        private void btBorrar_Click(object sender, EventArgs e)
+        {
+            // Limpiamos los campos
+            txtHistoriaCli.Text = "";
+            txtNomPaciente.Text = "";
+            txtApellidosPaciente.Text = "";
+            txtTelefono.Text = "";
+            rdButonHombre.Checked = false;
+            rdButtonMujer.Checked = false;
+            txtDiagnostico.Text = "";
+            txtTratamiento.Text = "";
+            listViewMedicos.Items.Clear();
+        }
+
+        private void btnVolverAreas_Click(object sender, EventArgs e)
+        {
+            GestionHospital gestionHospital = new GestionHospital();
+            gestionHospital.Show();
+            this.Hide();
+        }
     }
 }

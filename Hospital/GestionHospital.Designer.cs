@@ -31,6 +31,7 @@
             this.btnPaciente = new System.Windows.Forms.Button();
             this.btnMedico = new System.Windows.Forms.Button();
             this.btnPersAdm = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPaciente
@@ -82,18 +83,30 @@
             this.btnPersAdm.Text = "Area Personal Adm";
             this.btnPersAdm.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(366, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(363, 46);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "SELECCIONA TU AREA";
+            // 
             // GestionHospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1103, 658);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPersAdm);
             this.Controls.Add(this.btnMedico);
             this.Controls.Add(this.btnPaciente);
             this.Name = "GestionHospital";
             this.Text = "GestionHospital";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,5 +115,6 @@
         private System.Windows.Forms.Button btnPaciente;
         private System.Windows.Forms.Button btnMedico;
         private System.Windows.Forms.Button btnPersAdm;
+        private System.Windows.Forms.Label label1;
     }
 }
