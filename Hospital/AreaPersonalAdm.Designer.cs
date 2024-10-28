@@ -161,6 +161,7 @@
             this.btBorrar.TabIndex = 29;
             this.btBorrar.Text = "Borrar";
             this.btBorrar.UseVisualStyleBackColor = false;
+            this.btBorrar.Click += new System.EventHandler(this.btBorrar_Click);
             // 
             // btGuardarPersonalAdm
             // 
@@ -177,6 +178,7 @@
             this.btGuardarPersonalAdm.TabIndex = 28;
             this.btGuardarPersonalAdm.Text = "Agregar Personal Administrativo";
             this.btGuardarPersonalAdm.UseVisualStyleBackColor = false;
+            this.btGuardarPersonalAdm.Click += new System.EventHandler(this.btGuardarPersonalAdm_Click);
             // 
             // btnVolverAreas
             // 
@@ -193,6 +195,7 @@
             this.btnVolverAreas.TabIndex = 27;
             this.btnVolverAreas.Text = "Volver a Areas";
             this.btnVolverAreas.UseVisualStyleBackColor = false;
+            this.btnVolverAreas.Click += new System.EventHandler(this.btnVolverAreas_Click);
             // 
             // AreaPersonalAdm
             // 
