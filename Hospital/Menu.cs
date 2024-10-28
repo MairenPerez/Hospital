@@ -10,20 +10,18 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class Hospital : Form
+    public partial class Menu : Form
     {
-        public Hospital()
+        public Menu()
         {
             InitializeComponent();
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void btnAreas_Click(object sender, EventArgs e)
         {
-            // Lo llevamos a un nuevo formulario a GestionHospital
-            Menu menu = new Menu();
-            menu.Show();
+            Areas areas = new Areas();
+            areas.Show();
             this.Hide();
-
         }
     }
 }

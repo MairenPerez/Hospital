@@ -25,12 +25,11 @@ namespace Hospital
             rdButonHombreMed.Checked = false;
             rdButtonMujerMed.Checked = false;
             txtSalarioMedico.Text = "";
-            listBoxEspecialidadMed.ClearSelected();
         }
 
         private void btnVolverAreas_Click(object sender, EventArgs e)
         {
-            GestionHospital gestionHospital = new GestionHospital();
+            Areas gestionHospital = new Areas();
             gestionHospital.Show();
             this.Hide();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class GestionHospital : Form
+    public partial class Areas : Form
     {
-        public GestionHospital()
+        public Areas()
         {
             InitializeComponent();
         }
@@ -36,6 +36,13 @@ namespace Hospital
         {
             AreaPersonalAdm areaPersonalAdm = new AreaPersonalAdm();
             areaPersonalAdm.Show();
+            this.Hide();
+        }
+
+        private void btnVolverMenu_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
             this.Hide();
         }
     }
