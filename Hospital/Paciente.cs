@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestión_de_un_Hospital;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,10 @@ namespace Hospital
             Tratamiento = tratamiento;
             FechaIngreso = fechaIngreso;
             FechaAlta = fechaAlta;
+        }
+
+        public Paciente(string nombre, string apellidos, string sexo, string telefono) : base(nombre, apellidos, sexo, telefono)
+        {
         }
 
         public override string ToString()

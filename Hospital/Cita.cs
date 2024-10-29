@@ -8,6 +8,12 @@ namespace Hospital
 {
     class Cita 
     {
+        private DateTime now;
+        private string v1;
+        private string v2;
+        private string v3;
+        private string v4;
+
         public int IdCita { get; set; }
         public DateTime FechaHora { get; set; }
         public string Paciente { get; set; }
@@ -30,6 +36,15 @@ namespace Hospital
             Medico = medico;
             Motivo = motivo;
             Estado = EstadoCita.Pendiente;
+        }
+
+        public Cita(DateTime now, string v1, string v2, string v3, string v4)
+        {
+            this.now = now;
+            this.v1 = v1;
+            this.v2 = v2;
+            this.v3 = v3;
+            this.v4 = v4;
         }
 
         public void CancelarCita()

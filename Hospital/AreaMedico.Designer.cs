@@ -244,6 +244,7 @@
             this.btAgregarMedico.TabIndex = 33;
             this.btAgregarMedico.Text = "Agregar Medico";
             this.btAgregarMedico.UseVisualStyleBackColor = false;
+            this.btAgregarMedico.Click += new System.EventHandler(this.btAgregarMedico_Click);
             // 
             // btnVolverAreas
             // 
