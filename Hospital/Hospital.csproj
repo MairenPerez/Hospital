@@ -64,6 +64,7 @@
     <Compile Include="AreaPersonalAdm.Designer.cs">
       <DependentUpon>AreaPersonalAdm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cita.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +83,17 @@
     <Compile Include="GestionHospital.Designer.cs">
       <DependentUpon>GestionHospital.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hospital.cs" />
+    <Compile Include="Medico.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paciente.cs" />
+    <Compile Include="Persona.cs" />
+    <Compile Include="PersonalAdministrativo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AreaMedico.resx">
