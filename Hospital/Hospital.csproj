@@ -76,6 +76,12 @@
     <Compile Include="Areas.Designer.cs">
       <DependentUpon>Areas.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionHospital.Designer.cs">
+      <DependentUpon>GestionHospital.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Areas.resx">
       <DependentUpon>Areas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionHospital.resx">
+      <DependentUpon>GestionHospital.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

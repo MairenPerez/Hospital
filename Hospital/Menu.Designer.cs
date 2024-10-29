@@ -54,10 +54,11 @@
             this.btnGestionHospital.Location = new System.Drawing.Point(163, 198);
             this.btnGestionHospital.Name = "btnGestionHospital";
             this.btnGestionHospital.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnGestionHospital.Size = new System.Drawing.Size(258, 112);
+            this.btnGestionHospital.Size = new System.Drawing.Size(258, 91);
             this.btnGestionHospital.TabIndex = 6;
             this.btnGestionHospital.Text = "Gestion Hospital";
             this.btnGestionHospital.UseVisualStyleBackColor = false;
+            this.btnGestionHospital.Click += new System.EventHandler(this.btnGestionHospital_Click);
             // 
             // btnAreas
             // 
@@ -70,7 +71,7 @@
             this.btnAreas.Location = new System.Drawing.Point(531, 198);
             this.btnAreas.Name = "btnAreas";
             this.btnAreas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnAreas.Size = new System.Drawing.Size(258, 112);
+            this.btnAreas.Size = new System.Drawing.Size(258, 91);
             this.btnAreas.TabIndex = 7;
             this.btnAreas.Text = "Areas";
             this.btnAreas.UseVisualStyleBackColor = false;
@@ -81,7 +82,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(968, 639);
+            this.ClientSize = new System.Drawing.Size(968, 618);
             this.Controls.Add(this.btnAreas);
             this.Controls.Add(this.btnGestionHospital);
             this.Controls.Add(this.label1);

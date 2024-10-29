@@ -23,5 +23,12 @@ namespace Hospital
             areas.Show();
             this.Hide();
         }
+
+        private void btnGestionHospital_Click(object sender, EventArgs e)
+        {
+            GestionHospital gestionHospital = new GestionHospital();
+            gestionHospital.Show();
+            this.Hide();
+        }
     }
 }
