@@ -270,7 +270,6 @@
             this.btnVolverAreas.TabIndex = 24;
             this.btnVolverAreas.Text = "Volver a Areas";
             this.btnVolverAreas.UseVisualStyleBackColor = false;
-            this.btnVolverAreas.Click += new System.EventHandler(this.btnVolverAreas_Click);
             // 
             // btGuardar
             // 

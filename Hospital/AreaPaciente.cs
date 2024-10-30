@@ -12,9 +12,15 @@ namespace Hospital
 {
     public partial class AreaPaciente : Form
     {
-        public AreaPaciente()
+        private HospitalCentral hospitalCentral;
+        private GestionHospital ge;
+
+        // Constructor que recibe la instancia de HospitalCentral
+        public AreaPaciente(HospitalCentral hospitalCentral, GestionHospital ge)
         {
             InitializeComponent();
+            this.hospitalCentral = hospitalCentral;
+            this.ge = ge;
         }
 
         private void btBorrar_Click(object sender, EventArgs e)
@@ -30,32 +36,35 @@ namespace Hospital
             txtTratamiento.Text = "";
         }
 
-        private void btnVolverAreas_Click(object sender, EventArgs e)
-        {
-        }
-
         private void btGuardar_Click(object sender, EventArgs e)
         {
-            // Guardamos el paciente y lo añadimos a la lsita de pacientes
-            Paciente newPaciente = new Paciente(
-                txtNomPaciente.Text,
-                txtApellidosPaciente.Text,
-                rdButonHombre.Checked ? "Hombre" : "Mujer",
-                txtTelefono.Text,
-                txtHistoriaCli.Text,
-                txtDiagnostico.Text,
-                txtTratamiento.Text
+            try
+            {
+                // Crear el nuevo paciente con los datos del formulario
+                Paciente newPaciente = new Paciente(
+                    txtNomPaciente.Text,
+                    txtApellidosPaciente.Text,
+                    rdButonHombre.Checked ? "Hombre" : "Mujer",
+                    txtTelefono.Text,
+                    txtHistoriaCli.Text,
+                    txtDiagnostico.Text,
+                    txtTratamiento.Text
                 );
 
-            // Enviamos un mensaje si  se ha agregado correctamente el paciente a la lista
-            MessageBox.Show("Paciente agregado correctamente");
+                // Agregar el paciente a la lista en HospitalCentral
+                hospitalCentral.AgregarPaciente(newPaciente);
 
-            this.Close();
-            AreaPaciente areaPaciente = new AreaPaciente();
-            areaPaciente.Show();
+                // Confirmar la acción al usuario
+                MessageBox.Show("Paciente agregado correctamente");
 
-            // Añadimos el paciente a la lista de pacientes
-            GestionHospital.Pacientes.Add(newPaciente);
+                // Cerrar el formulario de creación de paciente
+                this.Close();
+                ge.CargarListaPacientes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar paciente: " + ex.Message);
+            }
         }
     }
 }

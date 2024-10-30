@@ -219,7 +219,7 @@
             this.listViewPacientes.HideSelection = false;
             this.listViewPacientes.Location = new System.Drawing.Point(18, 138);
             this.listViewPacientes.Name = "listViewPacientes";
-            this.listViewPacientes.Size = new System.Drawing.Size(632, 319);
+            this.listViewPacientes.Size = new System.Drawing.Size(666, 313);
             this.listViewPacientes.TabIndex = 40;
             this.listViewPacientes.UseCompatibleStateImageBehavior = false;
             // 
@@ -231,7 +231,7 @@
             this.btAsignarMedico.BackColor = System.Drawing.Color.Navy;
             this.btAsignarMedico.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btAsignarMedico.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAsignarMedico.Location = new System.Drawing.Point(687, 354);
+            this.btAsignarMedico.Location = new System.Drawing.Point(736, 350);
             this.btAsignarMedico.Name = "btAsignarMedico";
             this.btAsignarMedico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btAsignarMedico.Size = new System.Drawing.Size(133, 64);
@@ -247,7 +247,7 @@
             this.btAgregarPacienteList.BackColor = System.Drawing.Color.Navy;
             this.btAgregarPacienteList.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btAgregarPacienteList.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAgregarPacienteList.Location = new System.Drawing.Point(687, 261);
+            this.btAgregarPacienteList.Location = new System.Drawing.Point(736, 257);
             this.btAgregarPacienteList.Name = "btAgregarPacienteList";
             this.btAgregarPacienteList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btAgregarPacienteList.Size = new System.Drawing.Size(133, 64);
@@ -264,7 +264,7 @@
             this.btEliminarPacienteList.BackColor = System.Drawing.Color.Navy;
             this.btEliminarPacienteList.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btEliminarPacienteList.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEliminarPacienteList.Location = new System.Drawing.Point(687, 170);
+            this.btEliminarPacienteList.Location = new System.Drawing.Point(736, 166);
             this.btEliminarPacienteList.Name = "btEliminarPacienteList";
             this.btEliminarPacienteList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btEliminarPacienteList.Size = new System.Drawing.Size(133, 64);
@@ -313,7 +313,7 @@
             // 
             this.lblListaHosp.AutoSize = true;
             this.lblListaHosp.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaHosp.Location = new System.Drawing.Point(356, 107);
+            this.lblListaHosp.Location = new System.Drawing.Point(15, 109);
             this.lblListaHosp.Name = "lblListaHosp";
             this.lblListaHosp.Size = new System.Drawing.Size(250, 22);
             this.lblListaHosp.TabIndex = 55;
@@ -337,7 +337,7 @@
             this.button1.BackColor = System.Drawing.Color.Navy;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(728, 361);
+            this.button1.Location = new System.Drawing.Point(487, 362);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button1.Size = new System.Drawing.Size(133, 64);
@@ -349,9 +349,9 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(354, 142);
+            this.listBox1.Location = new System.Drawing.Point(13, 144);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(346, 344);
+            this.listBox1.Size = new System.Drawing.Size(446, 344);
             this.listBox1.TabIndex = 52;
             // 
             // button2
@@ -362,7 +362,7 @@
             this.button2.BackColor = System.Drawing.Color.Navy;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(728, 268);
+            this.button2.Location = new System.Drawing.Point(487, 269);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button2.Size = new System.Drawing.Size(133, 64);
@@ -378,7 +378,7 @@
             this.button3.BackColor = System.Drawing.Color.Navy;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button3.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(728, 177);
+            this.button3.Location = new System.Drawing.Point(487, 178);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button3.Size = new System.Drawing.Size(133, 64);
@@ -390,7 +390,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(350, 107);
+            this.label4.Location = new System.Drawing.Point(9, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 22);
             this.label4.TabIndex = 49;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    class Cita 
+    public class Cita 
     {
         private DateTime now;
         private string v1;

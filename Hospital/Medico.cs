@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Gestión_de_un_Hospital
 {
-    class Medico : Persona
+    public class Medico : Persona
     {
         public int NumColegiado { get; set; }
         public string Especialidad { get; set; }

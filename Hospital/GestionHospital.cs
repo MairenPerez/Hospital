@@ -50,6 +50,8 @@ namespace Hospital
             listViewPacientes.Columns.Add("Apellidos", 100);
             listViewPacientes.Columns.Add("Sexo", 100);
             listViewPacientes.Columns.Add("Telefono", 100);
+            listViewPacientes.Columns.Add("Diagnostico", 100);
+            listViewPacientes.Columns.Add("Tratamiento", 100);
         }
 
         // Configurar columnas para la lista de citas
@@ -88,7 +90,7 @@ namespace Hospital
 
         private void btAgregarPacienteList_Click(object sender, EventArgs e)
         {
-            AreaPaciente areaPaciente = new AreaPaciente();
+            AreaPaciente areaPaciente = new AreaPaciente(hospitalCentral, this);
             areaPaciente.Show();
         }
 
@@ -122,7 +124,7 @@ namespace Hospital
             }
         }
 
-        private void CargarListaPacientes()
+        public  void CargarListaPacientes()
         {
             listViewPacientes.Items.Clear();
             foreach (Paciente paciente in hospitalCentral.Pacientes)
@@ -131,11 +133,12 @@ namespace Hospital
                 item.SubItems.Add(paciente.Apellidos);
                 item.SubItems.Add(paciente.Sexo);
                 item.SubItems.Add(paciente.Telefono);
+                item.SubItems.Add(paciente.Diagnostico);
                 listViewPacientes.Items.Add(item);
             }
         }
 
-        private void CargarListaCitas()
+        public  void CargarListaCitas()
         {
             listViewCitas.Items.Clear();
             foreach (Cita cita in hospitalCentral.Citas)

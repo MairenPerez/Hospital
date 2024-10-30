@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    class Paciente : Persona
+   public  class Paciente : Persona
     {
         public string NumHistoriaClinica { get; set; }
         public string Diagnostico { get; set; }

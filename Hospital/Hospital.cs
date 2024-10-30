@@ -3,7 +3,7 @@ using Hospital;
 using System;
 using System.Collections.Generic;
 
- class HospitalCentral 
+ public class HospitalCentral 
 {
     internal Action<object, EventArgs> DataChanged;
 
