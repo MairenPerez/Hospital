@@ -30,7 +30,7 @@ namespace Hospital
             ConfigurarListViewMedicos();
             ConfigurarListViewPacientes();
             ConfigurarListViewCitas();
-        }
+        } 
 
         // Configurar columnas para la lista de médicos
         private void ConfigurarListViewMedicos()
