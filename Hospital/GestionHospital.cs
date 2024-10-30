@@ -30,9 +30,6 @@ namespace Hospital
             ConfigurarListViewMedicos();
             ConfigurarListViewPacientes();
             ConfigurarListViewCitas();
-
-            // Cargar datos de prueba en el HospitalCentral
-            //CargarDatosPrueba();
         }
 
         // Configurar columnas para la lista de médicos
@@ -111,8 +108,6 @@ namespace Hospital
                 CargarListaCitas();
             }
         }
-
-        // Método para cargar la lista de médicos
       
         public void CargarListaMedicos()
         {
@@ -127,7 +122,6 @@ namespace Hospital
             }
         }
 
-        // Método para cargar la lista de pacientes
         private void CargarListaPacientes()
         {
             listViewPacientes.Items.Clear();
@@ -141,7 +135,6 @@ namespace Hospital
             }
         }
 
-        // Método para cargar la lista de citas
         private void CargarListaCitas()
         {
             listViewCitas.Items.Clear();
