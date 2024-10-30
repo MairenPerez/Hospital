@@ -71,7 +71,6 @@
             // 
             // Pestanas
             // 
-            this.Pestanas.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.Pestanas.Controls.Add(this.ConsultarCitas);
             this.Pestanas.Controls.Add(this.ListaMedicos);
             this.Pestanas.Controls.Add(this.ListadoHospital);
@@ -96,9 +95,9 @@
             this.ConsultarCitas.Controls.Add(this.lblListMedicos);
             this.ConsultarCitas.Controls.Add(this.lblListaMedicos);
             this.ConsultarCitas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ConsultarCitas.Location = new System.Drawing.Point(4, 32);
+            this.ConsultarCitas.Location = new System.Drawing.Point(4, 29);
             this.ConsultarCitas.Name = "ConsultarCitas";
-            this.ConsultarCitas.Size = new System.Drawing.Size(1091, 611);
+            this.ConsultarCitas.Size = new System.Drawing.Size(1091, 614);
             this.ConsultarCitas.TabIndex = 0;
             this.ConsultarCitas.Text = "Lista de Medicos";
             // 
@@ -122,7 +121,7 @@
             this.btnGuardarListado.Location = new System.Drawing.Point(915, 539);
             this.btnGuardarListado.Name = "btnGuardarListado";
             this.btnGuardarListado.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnGuardarListado.Size = new System.Drawing.Size(154, 54);
+            this.btnGuardarListado.Size = new System.Drawing.Size(154, 57);
             this.btnGuardarListado.TabIndex = 38;
             this.btnGuardarListado.Text = "Guardar";
             this.btnGuardarListado.UseVisualStyleBackColor = false;
@@ -138,7 +137,7 @@
             this.btnVolverMenu.Location = new System.Drawing.Point(26, 539);
             this.btnVolverMenu.Name = "btnVolverMenu";
             this.btnVolverMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnVolverMenu.Size = new System.Drawing.Size(154, 61);
+            this.btnVolverMenu.Size = new System.Drawing.Size(154, 64);
             this.btnVolverMenu.TabIndex = 37;
             this.btnVolverMenu.Text = "Volver al Menu";
             this.btnVolverMenu.UseVisualStyleBackColor = false;
@@ -155,7 +154,7 @@
             this.btAñadirMedico.Location = new System.Drawing.Point(700, 275);
             this.btAñadirMedico.Name = "btAñadirMedico";
             this.btAñadirMedico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btAñadirMedico.Size = new System.Drawing.Size(133, 69);
+            this.btAñadirMedico.Size = new System.Drawing.Size(133, 72);
             this.btAñadirMedico.TabIndex = 36;
             this.btAñadirMedico.Text = "Añadir Medico";
             this.btAñadirMedico.UseVisualStyleBackColor = false;
@@ -172,7 +171,7 @@
             this.btEliminarMedico.Location = new System.Drawing.Point(700, 191);
             this.btEliminarMedico.Name = "btEliminarMedico";
             this.btEliminarMedico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btEliminarMedico.Size = new System.Drawing.Size(133, 64);
+            this.btEliminarMedico.Size = new System.Drawing.Size(133, 67);
             this.btEliminarMedico.TabIndex = 35;
             this.btEliminarMedico.Text = "Eliminar Medico";
             this.btEliminarMedico.UseVisualStyleBackColor = false;
@@ -207,10 +206,10 @@
             this.ListaMedicos.Controls.Add(this.btEliminarPacienteList);
             this.ListaMedicos.Controls.Add(this.lblListadoPacientes);
             this.ListaMedicos.Controls.Add(this.lblListaPacientes);
-            this.ListaMedicos.Location = new System.Drawing.Point(4, 32);
+            this.ListaMedicos.Location = new System.Drawing.Point(4, 29);
             this.ListaMedicos.Name = "ListaMedicos";
             this.ListaMedicos.Padding = new System.Windows.Forms.Padding(3);
-            this.ListaMedicos.Size = new System.Drawing.Size(1091, 611);
+            this.ListaMedicos.Size = new System.Drawing.Size(1091, 614);
             this.ListaMedicos.TabIndex = 1;
             this.ListaMedicos.Text = "Listar pacientes";
             // 
@@ -234,7 +233,7 @@
             this.btAsignarMedico.Location = new System.Drawing.Point(736, 350);
             this.btAsignarMedico.Name = "btAsignarMedico";
             this.btAsignarMedico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btAsignarMedico.Size = new System.Drawing.Size(133, 64);
+            this.btAsignarMedico.Size = new System.Drawing.Size(133, 67);
             this.btAsignarMedico.TabIndex = 39;
             this.btAsignarMedico.Text = "Asignarle un Medico";
             this.btAsignarMedico.UseVisualStyleBackColor = false;
@@ -250,7 +249,7 @@
             this.btAgregarPacienteList.Location = new System.Drawing.Point(736, 257);
             this.btAgregarPacienteList.Name = "btAgregarPacienteList";
             this.btAgregarPacienteList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btAgregarPacienteList.Size = new System.Drawing.Size(133, 64);
+            this.btAgregarPacienteList.Size = new System.Drawing.Size(133, 67);
             this.btAgregarPacienteList.TabIndex = 37;
             this.btAgregarPacienteList.Text = "Añadir Paciente";
             this.btAgregarPacienteList.UseVisualStyleBackColor = false;
@@ -267,7 +266,7 @@
             this.btEliminarPacienteList.Location = new System.Drawing.Point(736, 166);
             this.btEliminarPacienteList.Name = "btEliminarPacienteList";
             this.btEliminarPacienteList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btEliminarPacienteList.Size = new System.Drawing.Size(133, 64);
+            this.btEliminarPacienteList.Size = new System.Drawing.Size(133, 67);
             this.btEliminarPacienteList.TabIndex = 36;
             this.btEliminarPacienteList.Text = "Eliminar Paciente";
             this.btEliminarPacienteList.UseVisualStyleBackColor = false;
@@ -303,9 +302,9 @@
             this.ListadoHospital.Controls.Add(this.button3);
             this.ListadoHospital.Controls.Add(this.label4);
             this.ListadoHospital.Controls.Add(this.label5);
-            this.ListadoHospital.Location = new System.Drawing.Point(4, 32);
+            this.ListadoHospital.Location = new System.Drawing.Point(4, 29);
             this.ListadoHospital.Name = "ListadoHospital";
-            this.ListadoHospital.Size = new System.Drawing.Size(1091, 611);
+            this.ListadoHospital.Size = new System.Drawing.Size(1091, 614);
             this.ListadoHospital.TabIndex = 3;
             this.ListadoHospital.Text = "Listado Hospital";
             // 
@@ -337,10 +336,10 @@
             this.button1.BackColor = System.Drawing.Color.Navy;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(487, 362);
+            this.button1.Location = new System.Drawing.Point(543, 367);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(133, 64);
+            this.button1.Size = new System.Drawing.Size(133, 67);
             this.button1.TabIndex = 53;
             this.button1.Text = "Añadir Cita";
             this.button1.UseVisualStyleBackColor = false;
@@ -351,7 +350,7 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(13, 144);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(446, 344);
+            this.listBox1.Size = new System.Drawing.Size(502, 344);
             this.listBox1.TabIndex = 52;
             // 
             // button2
@@ -362,10 +361,10 @@
             this.button2.BackColor = System.Drawing.Color.Navy;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(487, 269);
+            this.button2.Location = new System.Drawing.Point(543, 274);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(133, 64);
+            this.button2.Size = new System.Drawing.Size(133, 67);
             this.button2.TabIndex = 51;
             this.button2.Text = "Modificar Cita";
             this.button2.UseVisualStyleBackColor = false;
@@ -378,10 +377,10 @@
             this.button3.BackColor = System.Drawing.Color.Navy;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button3.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(487, 178);
+            this.button3.Location = new System.Drawing.Point(543, 183);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button3.Size = new System.Drawing.Size(133, 64);
+            this.button3.Size = new System.Drawing.Size(133, 67);
             this.button3.TabIndex = 50;
             this.button3.Text = "Cancelar Cita";
             this.button3.UseVisualStyleBackColor = false;
@@ -415,9 +414,9 @@
             this.ListaPacientes.Controls.Add(this.btnCancelarCita);
             this.ListaPacientes.Controls.Add(this.label1);
             this.ListaPacientes.Controls.Add(this.lblCitas);
-            this.ListaPacientes.Location = new System.Drawing.Point(4, 32);
+            this.ListaPacientes.Location = new System.Drawing.Point(4, 29);
             this.ListaPacientes.Name = "ListaPacientes";
-            this.ListaPacientes.Size = new System.Drawing.Size(1091, 611);
+            this.ListaPacientes.Size = new System.Drawing.Size(1091, 614);
             this.ListaPacientes.TabIndex = 2;
             this.ListaPacientes.Text = "Citas";
             // 
@@ -461,7 +460,7 @@
             this.btnAñadirCita.Location = new System.Drawing.Point(758, 360);
             this.btnAñadirCita.Name = "btnAñadirCita";
             this.btnAñadirCita.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnAñadirCita.Size = new System.Drawing.Size(133, 64);
+            this.btnAñadirCita.Size = new System.Drawing.Size(133, 67);
             this.btnAñadirCita.TabIndex = 45;
             this.btnAñadirCita.Text = "Asignarle un Medico";
             this.btnAñadirCita.UseVisualStyleBackColor = false;
@@ -477,7 +476,7 @@
             this.btnModificarCita.Location = new System.Drawing.Point(758, 267);
             this.btnModificarCita.Name = "btnModificarCita";
             this.btnModificarCita.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnModificarCita.Size = new System.Drawing.Size(133, 64);
+            this.btnModificarCita.Size = new System.Drawing.Size(133, 67);
             this.btnModificarCita.TabIndex = 43;
             this.btnModificarCita.Text = "Modificar Cita";
             this.btnModificarCita.UseVisualStyleBackColor = false;
@@ -493,7 +492,7 @@
             this.btnCancelarCita.Location = new System.Drawing.Point(758, 176);
             this.btnCancelarCita.Name = "btnCancelarCita";
             this.btnCancelarCita.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnCancelarCita.Size = new System.Drawing.Size(133, 64);
+            this.btnCancelarCita.Size = new System.Drawing.Size(133, 67);
             this.btnCancelarCita.TabIndex = 42;
             this.btnCancelarCita.Text = "Cancelar Cita";
             this.btnCancelarCita.UseVisualStyleBackColor = false;
