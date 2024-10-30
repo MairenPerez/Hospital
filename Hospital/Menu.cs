@@ -19,9 +19,6 @@ namespace Hospital
 
         private void btnAreas_Click(object sender, EventArgs e)
         {
-            Areas areas = new Areas();
-            areas.Show();
-            this.Hide();
         }
 
         private void btnGestionHospital_Click(object sender, EventArgs e)

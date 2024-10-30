@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnGestionHospital = new System.Windows.Forms.Button();
-            this.btnAreas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +50,7 @@
             this.btnGestionHospital.BackColor = System.Drawing.Color.Navy;
             this.btnGestionHospital.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnGestionHospital.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionHospital.Location = new System.Drawing.Point(163, 198);
+            this.btnGestionHospital.Location = new System.Drawing.Point(332, 204);
             this.btnGestionHospital.Name = "btnGestionHospital";
             this.btnGestionHospital.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnGestionHospital.Size = new System.Drawing.Size(258, 91);
@@ -60,30 +59,12 @@
             this.btnGestionHospital.UseVisualStyleBackColor = false;
             this.btnGestionHospital.Click += new System.EventHandler(this.btnGestionHospital_Click);
             // 
-            // btnAreas
-            // 
-            this.btnAreas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAreas.BackColor = System.Drawing.Color.Navy;
-            this.btnAreas.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAreas.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAreas.Location = new System.Drawing.Point(531, 198);
-            this.btnAreas.Name = "btnAreas";
-            this.btnAreas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnAreas.Size = new System.Drawing.Size(258, 91);
-            this.btnAreas.TabIndex = 7;
-            this.btnAreas.Text = "Areas";
-            this.btnAreas.UseVisualStyleBackColor = false;
-            this.btnAreas.Click += new System.EventHandler(this.btnAreas_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(968, 618);
-            this.Controls.Add(this.btnAreas);
             this.Controls.Add(this.btnGestionHospital);
             this.Controls.Add(this.label1);
             this.Name = "Menu";
@@ -98,6 +79,5 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGestionHospital;
-        private System.Windows.Forms.Button btnAreas;
     }
 }

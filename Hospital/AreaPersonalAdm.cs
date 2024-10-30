@@ -32,9 +32,7 @@ namespace Hospital
 
         private void btnVolverAreas_Click(object sender, EventArgs e)
         {
-            Areas gestionHospital = new Areas();
-            gestionHospital.Show();
-            this.Hide();
+
         }
     }
 }

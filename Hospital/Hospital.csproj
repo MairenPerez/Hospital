@@ -71,12 +71,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Areas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Areas.Designer.cs">
-      <DependentUpon>Areas.cs</DependentUpon>
-    </Compile>
     <Compile Include="GestionHospital.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,9 +101,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Areas.resx">
-      <DependentUpon>Areas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionHospital.resx">
       <DependentUpon>GestionHospital.cs</DependentUpon>

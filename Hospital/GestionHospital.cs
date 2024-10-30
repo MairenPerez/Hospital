@@ -68,7 +68,7 @@ namespace Hospital
 
         private void btAñadirMedico_Click(object sender, EventArgs e)
         {
-            AreaMedico areaMedico = new AreaMedico(hospitalCentral);
+            AreaMedico areaMedico = new AreaMedico(hospitalCentral, this );
             areaMedico.Show();
         }
 

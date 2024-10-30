@@ -7,12 +7,14 @@ namespace Hospital
     internal partial class AreaMedico : Form
     {
         private HospitalCentral hospitalCentral;
+        private GestionHospital ge;
 
         // Constructor que recibe la instancia de HospitalCentral
-        public AreaMedico(HospitalCentral hospitalCentral)
+        public AreaMedico(HospitalCentral hospitalCentral, GestionHospital ge)
         {
             InitializeComponent();
             this.hospitalCentral = hospitalCentral;
+            this.ge = ge;
         }
 
         public EventHandler<Medico> MedicoAgregado { get; internal set; }
@@ -40,6 +42,7 @@ namespace Hospital
 
                 // Cerrar el formulario de creación de médico
                 this.Close();
+                ge.CargarListaMedicos();
             }
             catch (Exception ex)
             {
