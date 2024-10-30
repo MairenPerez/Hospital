@@ -287,6 +287,7 @@
             this.btGuardar.TabIndex = 25;
             this.btGuardar.Text = "Agregar Paciente";
             this.btGuardar.UseVisualStyleBackColor = false;
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
             // btBorrar
             // 
@@ -349,6 +350,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AreaPaciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AreaPaciente";
             this.ResumeLayout(false);
             this.PerformLayout();

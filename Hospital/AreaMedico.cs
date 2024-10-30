@@ -1,46 +1,50 @@
 ﻿using Gestión_de_un_Hospital;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hospital
 {
-    partial class AreaMedico : Form
+    internal partial class AreaMedico : Form
     {
-        public AreaMedico()
+        private HospitalCentral hospitalCentral;
+
+        // Constructor que recibe la instancia de HospitalCentral
+        public AreaMedico(HospitalCentral hospitalCentral)
         {
             InitializeComponent();
+            this.hospitalCentral = hospitalCentral;
         }
 
-        public Medico Medico { get; set; }
-
-        private void btBorrar_Click(object sender, EventArgs e)
-        {
-            txtNombreMedico.Text = "";
-            txtApellidosMedico.Text = "";
-            txtTelefonoMedico.Text = "";
-            rdButonHombreMed.Checked = false;
-            rdButtonMujerMed.Checked = false;
-            txtSalarioMedico.Text = "";
-        }
-
-        private void btnVolverAreas_Click(object sender, EventArgs e)
-        {
-            Areas gestionHospital = new Areas();
-            gestionHospital.Show();
-            this.Hide();
-        }
+        public EventHandler<Medico> MedicoAgregado { get; internal set; }
 
         private void btAgregarMedico_Click(object sender, EventArgs e)
         {
-            // Guarda el medico y se añade al listViewMedicos cuando el usuario clicka en la pestana de medicos
-            //Medico medico = new Medico(txtNombreMedico.Text, txtApellidosMedico.Text, txtTelefonoMedico.Text, rdButonHombreMed.Checked ? Medico.Sexo.Hombre : Medico.Sexo.Mujer, Convert.ToDouble(txtSalarioMedico.Text));
+            try
+            {
+                // Crear el nuevo médico con los datos del formulario
+                Medico newMedico = new Medico(
+                    txtNombreMedico.Text,
+                    txtApellidosMedico.Text,
+                    rdButonHombreMed.Checked ? "Hombre" : "Mujer",
+                    txtTelefonoMedico.Text,
+                    "Especialidad", // Asegúrate de tener un campo para la especialidad
+                    123456, // Número de colegiado (puedes cambiarlo o obtenerlo de un campo si es necesario)
+                    Convert.ToDouble(txtSalarioMedico.Text)
+                );
+
+                // Agregar el médico a la lista en HospitalCentral
+                hospitalCentral.AgregarMedico(newMedico);
+
+                // Confirmar la acción al usuario
+                MessageBox.Show("Médico agregado correctamente");
+
+                // Cerrar el formulario de creación de médico
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar médico: " + ex.Message);
+            }
         }
     }
 }

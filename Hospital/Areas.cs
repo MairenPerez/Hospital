@@ -15,6 +15,8 @@ namespace Hospital
         public Areas()
         {
             InitializeComponent();
+            this.hospitalCentral = hospitalCentral;
+
         }
 
         private void btnPaciente_Click(object sender, EventArgs e)
@@ -25,9 +27,11 @@ namespace Hospital
             this.Hide();
         }
 
+        private HospitalCentral hospitalCentral;
+
         private void btnMedico_Click(object sender, EventArgs e)
         {
-            AreaMedico areaMedico = new AreaMedico();
+            AreaMedico areaMedico = new AreaMedico(hospitalCentral);
             areaMedico.Show();
             this.Hide();
         }

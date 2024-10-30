@@ -38,6 +38,7 @@
             this.lblListMedicos = new System.Windows.Forms.Label();
             this.lblListaMedicos = new System.Windows.Forms.Label();
             this.ListaMedicos = new System.Windows.Forms.TabPage();
+            this.listViewPacientes = new System.Windows.Forms.ListView();
             this.btAsignarMedico = new System.Windows.Forms.Button();
             this.btAgregarPacienteList = new System.Windows.Forms.Button();
             this.btEliminarPacienteList = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ListaPacientes = new System.Windows.Forms.TabPage();
+            this.listViewCitas = new System.Windows.Forms.ListView();
             this.lblListadoCitas = new System.Windows.Forms.Label();
             this.lblListaCitas = new System.Windows.Forms.Label();
             this.btnAñadirCita = new System.Windows.Forms.Button();
@@ -60,8 +62,6 @@
             this.btnCancelarCita = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCitas = new System.Windows.Forms.Label();
-            this.listViewPacientes = new System.Windows.Forms.ListView();
-            this.listViewCitas = new System.Windows.Forms.ListView();
             this.Pestanas.SuspendLayout();
             this.ConsultarCitas.SuspendLayout();
             this.ListaMedicos.SuspendLayout();
@@ -152,7 +152,7 @@
             this.btAñadirMedico.BackColor = System.Drawing.Color.Navy;
             this.btAñadirMedico.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btAñadirMedico.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAñadirMedico.Location = new System.Drawing.Point(708, 268);
+            this.btAñadirMedico.Location = new System.Drawing.Point(700, 275);
             this.btAñadirMedico.Name = "btAñadirMedico";
             this.btAñadirMedico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btAñadirMedico.Size = new System.Drawing.Size(133, 69);
@@ -169,7 +169,7 @@
             this.btEliminarMedico.BackColor = System.Drawing.Color.Navy;
             this.btEliminarMedico.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btEliminarMedico.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEliminarMedico.Location = new System.Drawing.Point(708, 184);
+            this.btEliminarMedico.Location = new System.Drawing.Point(700, 191);
             this.btEliminarMedico.Name = "btEliminarMedico";
             this.btEliminarMedico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btEliminarMedico.Size = new System.Drawing.Size(133, 64);
@@ -213,6 +213,15 @@
             this.ListaMedicos.Size = new System.Drawing.Size(1091, 611);
             this.ListaMedicos.TabIndex = 1;
             this.ListaMedicos.Text = "Listar pacientes";
+            // 
+            // listViewPacientes
+            // 
+            this.listViewPacientes.HideSelection = false;
+            this.listViewPacientes.Location = new System.Drawing.Point(18, 138);
+            this.listViewPacientes.Name = "listViewPacientes";
+            this.listViewPacientes.Size = new System.Drawing.Size(632, 319);
+            this.listViewPacientes.TabIndex = 40;
+            this.listViewPacientes.UseCompatibleStateImageBehavior = false;
             // 
             // btAsignarMedico
             // 
@@ -412,6 +421,15 @@
             this.ListaPacientes.TabIndex = 2;
             this.ListaPacientes.Text = "Citas";
             // 
+            // listViewCitas
+            // 
+            this.listViewCitas.HideSelection = false;
+            this.listViewCitas.Location = new System.Drawing.Point(28, 126);
+            this.listViewCitas.Name = "listViewCitas";
+            this.listViewCitas.Size = new System.Drawing.Size(694, 369);
+            this.listViewCitas.TabIndex = 48;
+            this.listViewCitas.UseCompatibleStateImageBehavior = false;
+            // 
             // lblListadoCitas
             // 
             this.lblListadoCitas.AutoSize = true;
@@ -498,24 +516,6 @@
             this.lblCitas.Size = new System.Drawing.Size(0, 44);
             this.lblCitas.TabIndex = 40;
             // 
-            // listViewPacientes
-            // 
-            this.listViewPacientes.HideSelection = false;
-            this.listViewPacientes.Location = new System.Drawing.Point(18, 138);
-            this.listViewPacientes.Name = "listViewPacientes";
-            this.listViewPacientes.Size = new System.Drawing.Size(632, 319);
-            this.listViewPacientes.TabIndex = 40;
-            this.listViewPacientes.UseCompatibleStateImageBehavior = false;
-            // 
-            // listViewCitas
-            // 
-            this.listViewCitas.HideSelection = false;
-            this.listViewCitas.Location = new System.Drawing.Point(28, 126);
-            this.listViewCitas.Name = "listViewCitas";
-            this.listViewCitas.Size = new System.Drawing.Size(694, 369);
-            this.listViewCitas.TabIndex = 48;
-            this.listViewCitas.UseCompatibleStateImageBehavior = false;
-            // 
             // GestionHospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -526,6 +526,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GestionHospital";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GestionHospital";
             this.Pestanas.ResumeLayout(false);
             this.ConsultarCitas.ResumeLayout(false);

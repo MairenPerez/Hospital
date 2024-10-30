@@ -37,6 +37,14 @@ namespace Hospital
             FechaAlta = fechaAlta;
         }
 
+        public Paciente(string nombre, string apellidos, string sexo, string telefono, string text, string text1) : base(nombre, apellidos, sexo, telefono)
+        {
+        }
+
+        public Paciente(string nombre, string apellidos, string sexo, string telefono, string text, string text1, string text2) : this(nombre, apellidos, sexo, telefono, text, text1)
+        {
+        }
+
         public Paciente(string nombre, string apellidos, string sexo, string telefono) : base(nombre, apellidos, sexo, telefono)
         {
         }

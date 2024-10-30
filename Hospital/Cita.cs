@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestión_de_un_Hospital;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace Hospital
         private string v2;
         private string v3;
         private string v4;
+        internal object FechaCita;
 
         public int IdCita { get; set; }
         public DateTime FechaHora { get; set; }
@@ -20,6 +22,8 @@ namespace Hospital
         public string Medico { get; set; }
         public string Motivo { get; set; }
         public EstadoCita Estado { get; set; }
+        public Paciente Paciente2 { get; }
+        public Medico Medico2 { get; }
 
         public enum EstadoCita
         {
@@ -45,6 +49,13 @@ namespace Hospital
             this.v2 = v2;
             this.v3 = v3;
             this.v4 = v4;
+        }
+
+        public Cita(DateTime now, Paciente paciente2, Medico medico2)
+        {
+            this.now = now;
+            Paciente2 = paciente2;
+            Medico2 = medico2;
         }
 
         public void CancelarCita()

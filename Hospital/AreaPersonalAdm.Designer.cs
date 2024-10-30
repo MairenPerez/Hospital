@@ -216,6 +216,7 @@
             this.Controls.Add(this.lblNomPersonalAdm);
             this.Controls.Add(this.lblPersonalAdm);
             this.Name = "AreaPersonalAdm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AreaPersonalAdm";
             this.ResumeLayout(false);
             this.PerformLayout();

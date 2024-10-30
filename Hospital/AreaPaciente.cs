@@ -36,5 +36,29 @@ namespace Hospital
             gestionHospital.Show();
             this.Hide();
         }
+
+        private void btGuardar_Click(object sender, EventArgs e)
+        {
+            // Guardamos el paciente y lo añadimos a la lsita de pacientes
+            Paciente newPaciente = new Paciente(
+                txtNomPaciente.Text,
+                txtApellidosPaciente.Text,
+                rdButonHombre.Checked ? "Hombre" : "Mujer",
+                txtTelefono.Text,
+                txtHistoriaCli.Text,
+                txtDiagnostico.Text,
+                txtTratamiento.Text
+                );
+
+            // Enviamos un mensaje si  se ha agregado correctamente el paciente a la lista
+            MessageBox.Show("Paciente agregado correctamente");
+
+            this.Close();
+            AreaPaciente areaPaciente = new AreaPaciente();
+            areaPaciente.Show();
+
+            // Añadimos el paciente a la lista de pacientes
+            GestionHospital.Pacientes.Add(newPaciente);
+        }
     }
 }

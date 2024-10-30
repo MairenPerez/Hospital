@@ -227,7 +227,6 @@
             this.btBorrar.TabIndex = 34;
             this.btBorrar.Text = "Borrar";
             this.btBorrar.UseVisualStyleBackColor = false;
-            this.btBorrar.Click += new System.EventHandler(this.btBorrar_Click);
             // 
             // btAgregarMedico
             // 
@@ -261,7 +260,6 @@
             this.btnVolverAreas.TabIndex = 35;
             this.btnVolverAreas.Text = "Volver a Areas";
             this.btnVolverAreas.UseVisualStyleBackColor = false;
-            this.btnVolverAreas.Click += new System.EventHandler(this.btnVolverAreas_Click);
             // 
             // AreaMedico
             // 

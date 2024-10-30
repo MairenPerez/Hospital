@@ -1,12 +1,16 @@
 ﻿using Gestión_de_un_Hospital;
 using Hospital;
+using System;
 using System.Collections.Generic;
 
  class HospitalCentral 
 {
+    internal Action<object, EventArgs> DataChanged;
+
     public List<Medico> Medicos { get; set; }
     public List<Paciente> Pacientes { get; set; }
     public List<Cita> Citas { get; set; }
+    public static HospitalCentral Instance { get; internal set; }
 
     public HospitalCentral()
     {
@@ -28,5 +32,10 @@ using System.Collections.Generic;
     public void AgregarCita(Cita cita)
     {
         Citas.Add(cita);
+    }
+
+    internal IEnumerable<object> BuscarPacientes(string textoBusqueda)
+    {
+        throw new NotImplementedException();
     }
 }

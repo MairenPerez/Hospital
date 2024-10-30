@@ -15,6 +15,10 @@ namespace Hospital
     public partial class GestionHospital : Form
     {
         private HospitalCentral hospitalCentral;
+        internal static List<Medico> Medicos = new List<Medico>();
+        internal static List<Paciente> Pacientes = new List<Paciente>();
+
+        public TabPage ListaCitas { get; private set; }
 
         public GestionHospital()
         {
@@ -28,7 +32,7 @@ namespace Hospital
             ConfigurarListViewCitas();
 
             // Cargar datos de prueba en el HospitalCentral
-            CargarDatosPrueba();
+            //CargarDatosPrueba();
         }
 
         // Configurar columnas para la lista de médicos
@@ -62,24 +66,12 @@ namespace Hospital
             listViewCitas.Columns.Add("Estado", 100);
         }
 
-        // Cargar algunos datos de prueba en el hospital
-        private void CargarDatosPrueba()
-        {
-            hospitalCentral.AgregarMedico(new Medico("Juan", "Perez", "Masculino", "123456789", "Cardiología", 12345, 50000));
-            hospitalCentral.AgregarMedico(new Medico("Maria", "Lopez", "Femenino", "987654321", "Neurología", 67890, 60000));
-
-            hospitalCentral.AgregarPaciente(new Paciente("Ana", "Gomez", "Femenino", "111222333"));
-            hospitalCentral.AgregarPaciente(new Paciente("Luis", "Martinez", "Masculino", "444555666"));
-
-            hospitalCentral.AgregarCita(new Cita(DateTime.Now, "Ana Gomez", "Juan Perez", "Consulta general", "Programada"));
-            hospitalCentral.AgregarCita(new Cita(DateTime.Now.AddHours(2), "Luis Martinez", "Maria Lopez", "Revisión", "Completada"));
-        }
-
         private void btAñadirMedico_Click(object sender, EventArgs e)
         {
-            AreaMedico areaMedico = new AreaMedico();
+            AreaMedico areaMedico = new AreaMedico(hospitalCentral);
             areaMedico.Show();
         }
+
 
         private void btEliminarMedico_Click(object sender, EventArgs e)
         {
@@ -103,6 +95,7 @@ namespace Hospital
             areaPaciente.Show();
         }
 
+
         private void Pestanas_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Pestanas.SelectedTab == ListaMedicos)
@@ -113,14 +106,15 @@ namespace Hospital
             {
                 CargarListaPacientes();
             }
-            else if (Pestanas.SelectedTab == ListadoHospital)
+            else if (Pestanas.SelectedTab == ListaCitas)
             {
                 CargarListaCitas();
             }
         }
 
         // Método para cargar la lista de médicos
-        private void CargarListaMedicos()
+      
+        public void CargarListaMedicos()
         {
             listViewMedicos.Items.Clear();
             foreach (Medico medico in hospitalCentral.Medicos)
@@ -160,6 +154,16 @@ namespace Hospital
                 item.SubItems.Add(cita.Estado.ToString());
                 listViewCitas.Items.Add(item);
             }
+        }
+        private void AreaMedico_MedicoAgregado(object sender, Medico e)
+        {
+
+            ListViewItem item = new ListViewItem(e.Nombre);
+            item.SubItems.Add(e.Apellidos);
+            item.SubItems.Add(e.Especialidad);
+            item.SubItems.Add(e.Telefono);
+            listViewMedicos.Items.Add(item);
+            hospitalCentral.AgregarMedico(e);
         }
     }
 }
