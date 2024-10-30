@@ -36,7 +36,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(324, 42);
+            this.label1.Location = new System.Drawing.Point(324, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(282, 44);
             this.label1.TabIndex = 0;

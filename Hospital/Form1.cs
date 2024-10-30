@@ -20,8 +20,8 @@ namespace Hospital
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             // Lo llevamos a un nuevo formulario a GestionHospital
-            Menu menu = new Menu();
-            menu.Show();
+            GestionHospital gestionHospital = new GestionHospital();
+            gestionHospital.Show();
             this.Hide();
 
         }
