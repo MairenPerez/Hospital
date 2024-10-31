@@ -24,6 +24,10 @@ namespace Gestión_de_un_Hospital
             Citas = new List<Cita>();
         }
 
+        public Medico(string nombre, string apellidos, string sexo, string telefono, object v1, int v2, double v3) : base(nombre, apellidos, sexo, telefono)
+        {
+        }
+
         public Medico(string nombre, string apellidos, string sexo, string telefono) : base(nombre, apellidos, sexo, telefono)
         {
         }

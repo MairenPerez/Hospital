@@ -29,7 +29,7 @@ namespace Hospital
                     txtApellidosMedico.Text,
                     rdButonHombreMed.Checked ? "Hombre" : "Mujer",
                     txtTelefonoMedico.Text,
-                    "Especialidad", // Asegúrate de tener un campo para la especialidad
+                    listBoxEspecialidadMed, // Asegúrate de tener un campo para la especialidad
                     123456, // Número de colegiado (puedes cambiarlo o obtenerlo de un campo si es necesario)
                     Convert.ToDouble(txtSalarioMedico.Text)
                 );
