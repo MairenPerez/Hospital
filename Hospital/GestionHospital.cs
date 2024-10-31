@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Hospital
 {
     public partial class GestionHospital : Form
@@ -30,6 +29,27 @@ namespace Hospital
             ConfigurarListViewMedicos();
             ConfigurarListViewPacientes();
             ConfigurarListViewCitas();
+
+            // Añadir médicos de prueba
+            AgregarMedicosDePrueba();
+
+            // Cargar lista de médicos para visualizar los médicos de prueba
+            CargarListaMedicos();
+        }
+
+        // Método para añadir médicos de prueba
+        private void AgregarMedicosDePrueba()
+        {
+            hospitalCentral.AgregarMedico(new Medico("Juan", "Pérez", "Cardiología", "123456789"));
+            hospitalCentral.AgregarMedico(new Medico("Ana", "García", "Pediatría", "987654321"));
+            hospitalCentral.AgregarMedico(new Medico("Luis", "Martínez", "Neurología", "112233445"));
+            hospitalCentral.AgregarMedico(new Medico("Sofía", "López", "Dermatología", "556677889"));
+
+            // Actualizar lista de médicos en el ListView
+            foreach (var medico in hospitalCentral.Medicos)
+            {
+                Medicos.Add(medico);
+            }
         }
 
         // Configurar columnas para la lista de médicos
@@ -71,7 +91,6 @@ namespace Hospital
             areaMedico.Show();
         }
 
-
         private void btEliminarMedico_Click(object sender, EventArgs e)
         {
             // Eliminamos el médico seleccionado de la lista
@@ -93,7 +112,6 @@ namespace Hospital
             AreaPaciente areaPaciente = new AreaPaciente(hospitalCentral, this);
             areaPaciente.Show();
         }
-
 
         private void Pestanas_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -134,6 +152,7 @@ namespace Hospital
                 item.SubItems.Add(paciente.Sexo);
                 item.SubItems.Add(paciente.Telefono);
                 item.SubItems.Add(paciente.Diagnostico);
+                item.SubItems.Add(paciente.Tratamiento);
                 listViewPacientes.Items.Add(item);
             }
         }
@@ -151,52 +170,52 @@ namespace Hospital
                 listViewCitas.Items.Add(item);
             }
         }
-        private void AreaMedico_MedicoAgregado(object sender, Medico e)
-        {
-
-            ListViewItem item = new ListViewItem(e.Nombre);
-            item.SubItems.Add(e.Apellidos);
-            item.SubItems.Add(e.Especialidad);
-            item.SubItems.Add(e.Telefono);
-            listViewMedicos.Items.Add(item);
-            hospitalCentral.AgregarMedico(e);
-        }
-
         private void btAsignarMedico_Click(object sender, EventArgs e)
         {
-            if (listViewPacientes.SelectedItems.Count > 0 && listViewMedicos.SelectedItems.Count > 0)
+            // Verificar si hay un paciente seleccionado
+            if (listViewPacientes.SelectedItems.Count > 0)
             {
-                ListViewItem itemPaciente = listViewPacientes.SelectedItems[0];
-                ListViewItem itemMedico = listViewMedicos.SelectedItems[0];
-                string nombrePaciente = itemPaciente.SubItems[0].Text;
-                string nombreMedico = itemMedico.SubItems[0].Text;
-
-                // Confirmamos la selección y datos obtenidos
-                MessageBox.Show($"Paciente seleccionado: {nombrePaciente}, Médico seleccionado: {nombreMedico}");
-
-                Paciente paciente = hospitalCentral.Pacientes.Find(p => p.Nombre == nombrePaciente);
-                Medico medico = hospitalCentral.Medicos.Find(m => m.Nombre == nombreMedico);
-
-                if (paciente != null && medico != null)
+                // Verificar si hay médicos en la lista de médicos
+                if (listViewMedicos.Items.Count > 0)
                 {
-                    paciente.MedicoAsignado = medico;
-                    MessageBox.Show($"Se ha asignado el médico {nombreMedico} al paciente {nombrePaciente}");
+                    // Obtener el nombre del paciente seleccionado
+                    string nombrePaciente = listViewPacientes.SelectedItems[0].Text;
+
+                    // Obtener el primer médico en la lista
+                    string nombreMedico = listViewMedicos.Items[0].Text;
+
+                    // Confirmar selección
+                    MessageBox.Show($"Paciente seleccionado: {nombrePaciente}, Médico disponible: {nombreMedico}");
+
+                    // Asignación lógica (opcional, según la implementación)
+                    Paciente paciente = hospitalCentral.Pacientes.Find(p => p.Nombre == nombrePaciente);
+                    Medico medico = hospitalCentral.Medicos.Find(m => m.Nombre == nombreMedico);
+
+                    if (paciente != null && medico != null)
+                    {
+                        paciente.MedicoAsignado = medico;
+                        MessageBox.Show($"Se ha asignado el médico {nombreMedico} al paciente {nombrePaciente}");
+                        CargarListaPacientes(); // Refresca la lista para mostrar cambios
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha encontrado el paciente o el médico en los datos.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No se ha encontrado el paciente o el médico en los datos.");
+                    MessageBox.Show("No hay médicos disponibles en la lista de médicos.");
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione un paciente y un médico antes de asignar.");
+                MessageBox.Show("Seleccione un paciente antes de asignar un médico.");
             }
         }
 
 
         private void btEliminarPacienteList_Click(object sender, EventArgs e)
         {
-            // Eliminamos el paciente seleccionado de la lista
             if (listViewPacientes.SelectedItems.Count > 0)
             {
                 listViewPacientes.Items.Remove(listViewPacientes.SelectedItems[0]);
@@ -205,6 +224,7 @@ namespace Hospital
 
         private void btnGuardarListado_Click(object sender, EventArgs e)
         {
+            // Funcionalidad de guardar listado
         }
     }
 }
