@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hospital
@@ -40,13 +33,14 @@ namespace Hospital
         {
             try
             {
-                // Crear el nuevo paciente con los datos del formulario
+                // Crear el nuevo paciente con los datos del formulario y fecha de ingreso actual
                 Paciente newPaciente = new Paciente(
                     txtNomPaciente.Text,
                     txtApellidosPaciente.Text,
                     rdButonHombre.Checked ? "Hombre" : "Mujer",
                     txtTelefono.Text,
                     txtHistoriaCli.Text,
+                    DateTime.Now,  // Usamos la fecha actual como FechaIngreso
                     txtDiagnostico.Text,
                     txtTratamiento.Text
                 );
@@ -57,7 +51,7 @@ namespace Hospital
                 // Confirmar la acción al usuario
                 MessageBox.Show("Paciente agregado correctamente");
 
-                // Cerrar el formulario de creación de paciente
+                // Cerrar el formulario de creación de paciente y actualizar lista de pacientes
                 this.Close();
                 ge.CargarListaPacientes();
             }

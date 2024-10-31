@@ -1,13 +1,9 @@
 ﻿using Gestión_de_un_Hospital;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hospital
 {
-   public  class Paciente : Persona
+    public class Paciente : Persona
     {
         public string NumHistoriaClinica { get; set; }
         public string Diagnostico { get; set; }
@@ -16,7 +12,8 @@ namespace Hospital
         public DateTime? FechaAlta { get; set; }
         public Medico MedicoAsignado { get; set; }
 
-        public Paciente(string nombre, string apellidos, string sexo, string telefono, string direccion, DateTime fechaNacimiento, string numeroHistoriaClinica, string diagnostico, string tratamiento, DateTime fechaIngreso, Medico medicoAsignado)
+        // Constructor completo con todos los parámetros, incluyendo MedicoAsignado
+        public Paciente(string nombre, string apellidos, string sexo, string telefono, string direccion, DateTime fechaNacimiento, string numeroHistoriaClinica, string diagnostico, string tratamiento, DateTime fechaIngreso, Medico medicoAsignado = null)
             : base(nombre, apellidos, sexo, telefono)
         {
             NumHistoriaClinica = numeroHistoriaClinica;
@@ -27,6 +24,7 @@ namespace Hospital
             MedicoAsignado = medicoAsignado;
         }
 
+        // Constructor alternativo sin médico asignado, con FechaAlta opcional
         public Paciente(string nombre, string apellidos, string sexo, string telefono, string numHistoriaClinica, DateTime fechaIngreso, string diagnostico, string tratamiento, DateTime? fechaAlta = null)
             : base(nombre, apellidos, sexo, telefono)
         {
@@ -35,23 +33,26 @@ namespace Hospital
             Tratamiento = tratamiento;
             FechaIngreso = fechaIngreso;
             FechaAlta = fechaAlta;
+            MedicoAsignado = null;  // MedicoAsignado puede ser nulo inicialmente
         }
 
-        public Paciente(string nombre, string apellidos, string sexo, string telefono, string text, string text1) : base(nombre, apellidos, sexo, telefono)
+        // Constructor para un paciente básico (sin datos de historia clínica)
+        public Paciente(string nombre, string apellidos, string sexo, string telefono)
+            : base(nombre, apellidos, sexo, telefono)
         {
+            // Se inicializan los campos opcionales si se necesita una instancia básica
+            NumHistoriaClinica = "";
+            Diagnostico = "";
+            Tratamiento = "";
+            FechaIngreso = DateTime.MinValue;
+            FechaAlta = null;
+            MedicoAsignado = null;
         }
 
-        public Paciente(string nombre, string apellidos, string sexo, string telefono, string text, string text1, string text2) : this(nombre, apellidos, sexo, telefono, text, text1)
-        {
-        }
-
-        public Paciente(string nombre, string apellidos, string sexo, string telefono) : base(nombre, apellidos, sexo, telefono)
-        {
-        }
-
+        // Método ToString para obtener una descripción del paciente
         public override string ToString()
         {
-            return $"Paciente: {Nombre} {Apellidos}, NumHistoriaClinica: {NumHistoriaClinica}, Diagnostico: {Diagnostico}, Tratamiento: {Tratamiento}, FechaIngreso: {FechaIngreso}, FechaAlta: {FechaAlta}";
+            return $"Paciente: {Nombre} {Apellidos}, NumHistoriaClinica: {NumHistoriaClinica}, Diagnostico: {Diagnostico}, Tratamiento: {Tratamiento}, FechaIngreso: {FechaIngreso}, FechaAlta: {(FechaAlta.HasValue ? FechaAlta.Value.ToString("d") : "No dada de alta")}, MedicoAsignado: {(MedicoAsignado != null ? MedicoAsignado.Nombre : "Sin médico asignado")}";
         }
     }
 }

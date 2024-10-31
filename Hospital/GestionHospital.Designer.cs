@@ -125,6 +125,7 @@
             this.btnGuardarListado.TabIndex = 38;
             this.btnGuardarListado.Text = "Guardar";
             this.btnGuardarListado.UseVisualStyleBackColor = false;
+            this.btnGuardarListado.Click += new System.EventHandler(this.btnGuardarListado_Click);
             // 
             // btnVolverMenu
             // 
@@ -237,6 +238,7 @@
             this.btAsignarMedico.TabIndex = 39;
             this.btAsignarMedico.Text = "Asignarle un Medico";
             this.btAsignarMedico.UseVisualStyleBackColor = false;
+            this.btAsignarMedico.Click += new System.EventHandler(this.btAsignarMedico_Click);
             // 
             // btAgregarPacienteList
             // 
@@ -270,6 +272,7 @@
             this.btEliminarPacienteList.TabIndex = 36;
             this.btEliminarPacienteList.Text = "Eliminar Paciente";
             this.btEliminarPacienteList.UseVisualStyleBackColor = false;
+            this.btEliminarPacienteList.Click += new System.EventHandler(this.btEliminarPacienteList_Click);
             // 
             // lblListadoPacientes
             // 

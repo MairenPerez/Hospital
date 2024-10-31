@@ -7,15 +7,8 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    public class Cita 
+    public class Cita
     {
-        private DateTime now;
-        private string v1;
-        private string v2;
-        private string v3;
-        private string v4;
-        internal object FechaCita;
-
         public int IdCita { get; set; }
         public DateTime FechaHora { get; set; }
         public string Paciente { get; set; }
@@ -44,18 +37,19 @@ namespace Hospital
 
         public Cita(DateTime now, string v1, string v2, string v3, string v4)
         {
-            this.now = now;
-            this.v1 = v1;
-            this.v2 = v2;
-            this.v3 = v3;
-            this.v4 = v4;
+            FechaHora = now;
+            Paciente = v1;
+            Medico = v2;
+            Motivo = v3;
+            Estado = EstadoCita.Pendiente;
         }
 
         public Cita(DateTime now, Paciente paciente2, Medico medico2)
         {
-            this.now = now;
+            FechaHora = now;
             Paciente2 = paciente2;
             Medico2 = medico2;
+            Estado = EstadoCita.Pendiente;
         }
 
         public void CancelarCita()
