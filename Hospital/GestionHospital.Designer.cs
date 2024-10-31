@@ -76,17 +76,19 @@
             this.Pestanas.Controls.Add(this.ListadoHospital);
             this.Pestanas.Controls.Add(this.ListaPacientes);
             this.Pestanas.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Pestanas.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pestanas.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pestanas.Location = new System.Drawing.Point(-5, 1);
+            this.Pestanas.Multiline = true;
             this.Pestanas.Name = "Pestanas";
             this.Pestanas.SelectedIndex = 0;
+            this.Pestanas.ShowToolTips = true;
             this.Pestanas.Size = new System.Drawing.Size(1099, 647);
             this.Pestanas.TabIndex = 1;
             // 
             // ConsultarCitas
             // 
             this.ConsultarCitas.AutoScroll = true;
-            this.ConsultarCitas.BackColor = System.Drawing.Color.GhostWhite;
+            this.ConsultarCitas.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ConsultarCitas.Controls.Add(this.listViewMedicos);
             this.ConsultarCitas.Controls.Add(this.btnGuardarListado);
             this.ConsultarCitas.Controls.Add(this.btnVolverMenu);
@@ -95,16 +97,18 @@
             this.ConsultarCitas.Controls.Add(this.lblListMedicos);
             this.ConsultarCitas.Controls.Add(this.lblListaMedicos);
             this.ConsultarCitas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ConsultarCitas.Location = new System.Drawing.Point(4, 29);
+            this.ConsultarCitas.Location = new System.Drawing.Point(4, 30);
             this.ConsultarCitas.Name = "ConsultarCitas";
-            this.ConsultarCitas.Size = new System.Drawing.Size(1091, 614);
+            this.ConsultarCitas.Size = new System.Drawing.Size(1091, 613);
             this.ConsultarCitas.TabIndex = 0;
             this.ConsultarCitas.Text = "Lista de Medicos";
             // 
             // listViewMedicos
             // 
+            this.listViewMedicos.BackColor = System.Drawing.Color.GhostWhite;
+            this.listViewMedicos.GridLines = true;
             this.listViewMedicos.HideSelection = false;
-            this.listViewMedicos.Location = new System.Drawing.Point(26, 127);
+            this.listViewMedicos.Location = new System.Drawing.Point(176, 120);
             this.listViewMedicos.Name = "listViewMedicos";
             this.listViewMedicos.Size = new System.Drawing.Size(638, 330);
             this.listViewMedicos.TabIndex = 39;
@@ -121,7 +125,7 @@
             this.btnGuardarListado.Location = new System.Drawing.Point(915, 539);
             this.btnGuardarListado.Name = "btnGuardarListado";
             this.btnGuardarListado.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnGuardarListado.Size = new System.Drawing.Size(154, 57);
+            this.btnGuardarListado.Size = new System.Drawing.Size(154, 56);
             this.btnGuardarListado.TabIndex = 38;
             this.btnGuardarListado.Text = "Guardar";
             this.btnGuardarListado.UseVisualStyleBackColor = false;
@@ -138,7 +142,7 @@
             this.btnVolverMenu.Location = new System.Drawing.Point(26, 539);
             this.btnVolverMenu.Name = "btnVolverMenu";
             this.btnVolverMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnVolverMenu.Size = new System.Drawing.Size(154, 64);
+            this.btnVolverMenu.Size = new System.Drawing.Size(154, 63);
             this.btnVolverMenu.TabIndex = 37;
             this.btnVolverMenu.Text = "Volver al Menu";
             this.btnVolverMenu.UseVisualStyleBackColor = false;
@@ -152,10 +156,10 @@
             this.btAñadirMedico.BackColor = System.Drawing.Color.Navy;
             this.btAñadirMedico.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btAñadirMedico.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAñadirMedico.Location = new System.Drawing.Point(700, 275);
+            this.btAñadirMedico.Location = new System.Drawing.Point(850, 268);
             this.btAñadirMedico.Name = "btAñadirMedico";
             this.btAñadirMedico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btAñadirMedico.Size = new System.Drawing.Size(133, 72);
+            this.btAñadirMedico.Size = new System.Drawing.Size(133, 71);
             this.btAñadirMedico.TabIndex = 36;
             this.btAñadirMedico.Text = "Añadir Medico";
             this.btAñadirMedico.UseVisualStyleBackColor = false;
@@ -169,10 +173,10 @@
             this.btEliminarMedico.BackColor = System.Drawing.Color.Navy;
             this.btEliminarMedico.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btEliminarMedico.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEliminarMedico.Location = new System.Drawing.Point(700, 191);
+            this.btEliminarMedico.Location = new System.Drawing.Point(850, 184);
             this.btEliminarMedico.Name = "btEliminarMedico";
             this.btEliminarMedico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btEliminarMedico.Size = new System.Drawing.Size(133, 67);
+            this.btEliminarMedico.Size = new System.Drawing.Size(133, 66);
             this.btEliminarMedico.TabIndex = 35;
             this.btEliminarMedico.Text = "Eliminar Medico";
             this.btEliminarMedico.UseVisualStyleBackColor = false;
@@ -182,7 +186,7 @@
             // 
             this.lblListMedicos.AutoSize = true;
             this.lblListMedicos.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListMedicos.Location = new System.Drawing.Point(22, 91);
+            this.lblListMedicos.Location = new System.Drawing.Point(172, 84);
             this.lblListMedicos.Name = "lblListMedicos";
             this.lblListMedicos.Size = new System.Drawing.Size(158, 22);
             this.lblListMedicos.TabIndex = 5;
@@ -200,7 +204,7 @@
             // 
             // ListaMedicos
             // 
-            this.ListaMedicos.BackColor = System.Drawing.Color.GhostWhite;
+            this.ListaMedicos.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ListaMedicos.Controls.Add(this.listViewPacientes);
             this.ListaMedicos.Controls.Add(this.btAsignarMedico);
             this.ListaMedicos.Controls.Add(this.btAgregarPacienteList);
@@ -216,8 +220,10 @@
             // 
             // listViewPacientes
             // 
+            this.listViewPacientes.BackColor = System.Drawing.Color.GhostWhite;
+            this.listViewPacientes.GridLines = true;
             this.listViewPacientes.HideSelection = false;
-            this.listViewPacientes.Location = new System.Drawing.Point(18, 138);
+            this.listViewPacientes.Location = new System.Drawing.Point(140, 134);
             this.listViewPacientes.Name = "listViewPacientes";
             this.listViewPacientes.Size = new System.Drawing.Size(666, 313);
             this.listViewPacientes.TabIndex = 40;
@@ -231,7 +237,7 @@
             this.btAsignarMedico.BackColor = System.Drawing.Color.Navy;
             this.btAsignarMedico.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btAsignarMedico.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAsignarMedico.Location = new System.Drawing.Point(736, 350);
+            this.btAsignarMedico.Location = new System.Drawing.Point(858, 346);
             this.btAsignarMedico.Name = "btAsignarMedico";
             this.btAsignarMedico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btAsignarMedico.Size = new System.Drawing.Size(133, 67);
@@ -248,7 +254,7 @@
             this.btAgregarPacienteList.BackColor = System.Drawing.Color.Navy;
             this.btAgregarPacienteList.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btAgregarPacienteList.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAgregarPacienteList.Location = new System.Drawing.Point(736, 257);
+            this.btAgregarPacienteList.Location = new System.Drawing.Point(858, 253);
             this.btAgregarPacienteList.Name = "btAgregarPacienteList";
             this.btAgregarPacienteList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btAgregarPacienteList.Size = new System.Drawing.Size(133, 67);
@@ -265,7 +271,7 @@
             this.btEliminarPacienteList.BackColor = System.Drawing.Color.Navy;
             this.btEliminarPacienteList.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btEliminarPacienteList.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEliminarPacienteList.Location = new System.Drawing.Point(736, 166);
+            this.btEliminarPacienteList.Location = new System.Drawing.Point(858, 162);
             this.btEliminarPacienteList.Name = "btEliminarPacienteList";
             this.btEliminarPacienteList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btEliminarPacienteList.Size = new System.Drawing.Size(133, 67);
@@ -278,7 +284,7 @@
             // 
             this.lblListadoPacientes.AutoSize = true;
             this.lblListadoPacientes.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListadoPacientes.Location = new System.Drawing.Point(14, 104);
+            this.lblListadoPacientes.Location = new System.Drawing.Point(136, 100);
             this.lblListadoPacientes.Name = "lblListadoPacientes";
             this.lblListadoPacientes.Size = new System.Drawing.Size(165, 22);
             this.lblListadoPacientes.TabIndex = 1;
@@ -296,7 +302,7 @@
             // 
             // ListadoHospital
             // 
-            this.ListadoHospital.BackColor = System.Drawing.Color.GhostWhite;
+            this.ListadoHospital.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ListadoHospital.Controls.Add(this.lblListaHosp);
             this.ListadoHospital.Controls.Add(this.lblListadoHosp);
             this.ListadoHospital.Controls.Add(this.button1);
@@ -315,7 +321,7 @@
             // 
             this.lblListaHosp.AutoSize = true;
             this.lblListaHosp.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaHosp.Location = new System.Drawing.Point(15, 109);
+            this.lblListaHosp.Location = new System.Drawing.Point(270, 115);
             this.lblListaHosp.Name = "lblListaHosp";
             this.lblListaHosp.Size = new System.Drawing.Size(250, 22);
             this.lblListaHosp.TabIndex = 55;
@@ -339,7 +345,7 @@
             this.button1.BackColor = System.Drawing.Color.Navy;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(543, 367);
+            this.button1.Location = new System.Drawing.Point(798, 373);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button1.Size = new System.Drawing.Size(133, 67);
@@ -349,11 +355,12 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.GhostWhite;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(13, 144);
+            this.listBox1.ItemHeight = 21;
+            this.listBox1.Location = new System.Drawing.Point(268, 150);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(502, 344);
+            this.listBox1.Size = new System.Drawing.Size(502, 340);
             this.listBox1.TabIndex = 52;
             // 
             // button2
@@ -364,7 +371,7 @@
             this.button2.BackColor = System.Drawing.Color.Navy;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(543, 274);
+            this.button2.Location = new System.Drawing.Point(798, 280);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button2.Size = new System.Drawing.Size(133, 67);
@@ -380,7 +387,7 @@
             this.button3.BackColor = System.Drawing.Color.Navy;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button3.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(543, 183);
+            this.button3.Location = new System.Drawing.Point(798, 189);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button3.Size = new System.Drawing.Size(133, 67);
@@ -408,7 +415,7 @@
             // 
             // ListaPacientes
             // 
-            this.ListaPacientes.BackColor = System.Drawing.Color.GhostWhite;
+            this.ListaPacientes.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ListaPacientes.Controls.Add(this.listViewCitas);
             this.ListaPacientes.Controls.Add(this.lblListadoCitas);
             this.ListaPacientes.Controls.Add(this.lblListaCitas);
@@ -425,8 +432,10 @@
             // 
             // listViewCitas
             // 
+            this.listViewCitas.BackColor = System.Drawing.Color.GhostWhite;
+            this.listViewCitas.GridLines = true;
             this.listViewCitas.HideSelection = false;
-            this.listViewCitas.Location = new System.Drawing.Point(28, 126);
+            this.listViewCitas.Location = new System.Drawing.Point(140, 166);
             this.listViewCitas.Name = "listViewCitas";
             this.listViewCitas.Size = new System.Drawing.Size(694, 369);
             this.listViewCitas.TabIndex = 48;
@@ -436,7 +445,7 @@
             // 
             this.lblListadoCitas.AutoSize = true;
             this.lblListadoCitas.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListadoCitas.Location = new System.Drawing.Point(24, 90);
+            this.lblListadoCitas.Location = new System.Drawing.Point(136, 130);
             this.lblListadoCitas.Name = "lblListadoCitas";
             this.lblListadoCitas.Size = new System.Drawing.Size(128, 22);
             this.lblListadoCitas.TabIndex = 47;
@@ -460,7 +469,7 @@
             this.btnAñadirCita.BackColor = System.Drawing.Color.Navy;
             this.btnAñadirCita.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAñadirCita.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirCita.Location = new System.Drawing.Point(758, 360);
+            this.btnAñadirCita.Location = new System.Drawing.Point(870, 400);
             this.btnAñadirCita.Name = "btnAñadirCita";
             this.btnAñadirCita.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAñadirCita.Size = new System.Drawing.Size(133, 67);
@@ -476,7 +485,7 @@
             this.btnModificarCita.BackColor = System.Drawing.Color.Navy;
             this.btnModificarCita.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnModificarCita.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarCita.Location = new System.Drawing.Point(758, 267);
+            this.btnModificarCita.Location = new System.Drawing.Point(870, 307);
             this.btnModificarCita.Name = "btnModificarCita";
             this.btnModificarCita.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnModificarCita.Size = new System.Drawing.Size(133, 67);
@@ -492,7 +501,7 @@
             this.btnCancelarCita.BackColor = System.Drawing.Color.Navy;
             this.btnCancelarCita.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCancelarCita.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarCita.Location = new System.Drawing.Point(758, 176);
+            this.btnCancelarCita.Location = new System.Drawing.Point(870, 216);
             this.btnCancelarCita.Name = "btnCancelarCita";
             this.btnCancelarCita.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnCancelarCita.Size = new System.Drawing.Size(133, 67);
@@ -504,7 +513,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(71, 101);
+            this.label1.Location = new System.Drawing.Point(183, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 22);
             this.label1.TabIndex = 41;
