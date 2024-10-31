@@ -23,7 +23,8 @@ namespace Hospital
         {
             InitializeComponent();
             hospitalCentral = new HospitalCentral();
-            Pestanas.SelectedIndexChanged += new EventHandler(Pestanas_SelectedIndexChanged);
+            Pestanas.SelectedTabPage = ListaMedicositem;
+
 
             // Configurar columnas de cada ListView
             ConfigurarListViewMedicos();
@@ -115,18 +116,18 @@ namespace Hospital
 
         private void Pestanas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Pestanas.SelectedTab == ListaMedicos)
+            if (Pestanas.SelectedTabPage == ListaMedicositem)
             {
                 CargarListaMedicos();
             }
-            else if (Pestanas.SelectedTab == ListaPacientes)
+            else if (Pestanas.SelectedTabPage == ListaPacientesitem)
             {
                 CargarListaPacientes();
             }
-            else if (Pestanas.SelectedTab == ListaCitas)
-            {
-                CargarListaCitas();
-            }
+            //else if (Pestanas.SelectedTabPage == lista)
+            //{
+            //    CargarListaCitas();
+            //}
         }
 
         public void CargarListaMedicos()
